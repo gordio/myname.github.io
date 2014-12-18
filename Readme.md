@@ -8,7 +8,7 @@ How to use
 3. Add you posts to `_posts/` directory.
 4. Upload to you GitHub repository.
 
-__Read more: [About GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
+__Read more:__ [About GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
 
 
 Local server
