@@ -1,0 +1,25 @@
+---
+title: Articles
+---
+
+<section class="page">
+    <section class="page-list">
+        <h1 class="page-title">Articles</h1>
+        {% for post in site.posts %}
+        <article>
+            <h2><a href="{{ post.url | prepend: site.baseurl }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> - {{ post.title }}</a></h2>
+            <section role="disclaimer">{{ post.excerpt }}</section>
+        </article>
+        {% endfor %}
+    </section>
+</section>
+
+    {% if site.highlightjs %}
+    <script src="/assets/highlight.pack.js"></script>
+    <script src="/assets/highlight.init.js"></script>
+    {% endif %}
+    {% if site.hyphenator %}
+    <script src="/assets/hyphenator.js"></script>
+    <script src="/assets/hyphenator.init.js"></script>
+    <script src="/assets/patterns/en-us.js"></script>
+    {% endif %}

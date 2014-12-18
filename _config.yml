@@ -1,0 +1,34 @@
+# Configuration. About options - http://jekyllrb.com/docs/configuration/
+
+title: Site Title
+sub_title: Awesome description
+
+# twitter_username: login # comment to disable
+# github_username: login # comment to disable
+# disqus_shortname: login # comment to disable. Use https://disqus.com/profile/signup/ to create
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://myname.github.io" # the base hostname & protocol for your site
+
+hyphenator: true # Support only English letters
+highlightjs: true # Code syntax. Recomended: true
+markdown: kramdown
+kramdown:
+    input: GFM
+
+defaults:
+    -
+        scope:
+            path: "" # an empty string - all files in the project
+            type: "posts"
+        values:
+            layout: "post"
+    -
+        scope:
+            path: "" # an empty string - all files in the project
+        values:
+            layout: "default"
+
+destination: .site
+sass:
+    style: :compressed

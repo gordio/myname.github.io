@@ -1,0 +1,33 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="author" content="Lenstr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Design -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/code.css" async>
+    <link rel="stylesheet" href="/assets/font-icons.css" async>
+</head>
+<body class="vcard" itemscope itemtype="http://schema.org/Person">
+    <header>
+        <div class="content-wrap">
+            <hgroup>
+                <h1 class="head-title"><a href="/">{{ site.title }}</a></h1>
+                <h2 class="head-sub_title">{{ site.sub_title }}</h2>
+            </hgroup>
+            <nav class="head-nav">
+                {% if site.twitter_username %}<a class="icon-twitter" href="http://twitter.com/{{ site.twitter_username }}">Twitter</a>{% endif %}
+                {% if site.github_username %}<a class="icon-github" href="http://github.com/{{ github_username }}">GitHub</a>{% endif %}
+            </nav>
+        </div>
+    </header>
+    <section class="content-wrap">
+        {{ content }}
+    </section>
+</body>
+</html>

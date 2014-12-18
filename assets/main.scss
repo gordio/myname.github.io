@@ -1,0 +1,185 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "colors";
+
+@import "normalize";
+@import "codehl";
+
+
+// Page config
+$page-padding: 1.75em;
+$page-width: 44em;
+
+// Typography config
+$global-fonts: Georgia, Palatino, Times, "Times New Roman", serif;
+$title-font: Futura, Futura-Medium, "Futura Medium", "URW Gothic L", "Avant Garde", sans-serif;
+
+
+body {
+    color: #333;
+    background: #ABC;
+    font: normal 1.25em/1.35em $global-fonts;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.75em;
+    margin-bottom: 0.375em;
+    font: 1.5em/1.35em $title-font;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+a {
+    text-decoration: none;
+    & {
+        color: $blue;
+    }
+    &:visited {
+        color: $magenta;
+    }
+    &:hover,
+    &:active {
+        color: $red;
+        text-decoration: underline;
+    }
+}
+
+
+.content-wrap {
+    margin: 0 auto;
+    width: 95%;
+    max-width: $page-width;
+}
+
+
+header {
+    min-height: 5em;
+
+    hgroup {
+        float: left;
+        margin: 0.125em $page-padding;
+        max-width: 66%;
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.head-title {
+    margin: 0;
+
+    a {
+        color: #333;
+    }
+}
+.head-sub_title {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.head-nav {
+    padding: 2em $page-padding;
+    height: 1em;
+    text-align: right;
+
+    a + a {
+        margin-left: 0.75em;
+    }
+}
+
+
+.page {
+    padding: 0 $page-padding;
+    color: #444;
+    background: #FFF;
+
+    border: 1px solid $brown;
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.2);
+
+    // Page vertical padding. Combined with other elements.
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+    }
+    &:after {
+        margin-top: $page-padding;
+    }
+    &:before {
+        margin-bottom: $page-padding;
+    }
+}
+
+.page-list time {
+    font-family: monospace;
+}
+
+.page-nav a {
+    color: #777;
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.page-title {
+    margin: 0;
+    margin-bottom: 0.75em;
+    padding: 0;
+}
+
+.page-title {
+    color: #333;
+    text-decoration: none;
+    text-shadow: 0 .06em 0 rgba(0, 0, 0, 0.125);
+}
+
+.page {
+    margin-bottom: 1em;
+
+    p {
+        margin: 0.75em 0;
+        // text-indent: 1.5em;
+    }
+
+    pre {
+        margin: 0.75em $page-padding * -1;
+        padding: 0 $page-padding;
+        font: 1em/1.25em monospace, monospace;
+        line-height: 1.25em;
+        background: #F3F3F3;
+
+        code {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    blockquote {
+        margin: 0.75em 0;
+        padding: 0 0.75em;
+        border-left: 0.25em solid $brown;
+    }
+
+    img {
+        margin: 0.75em auto;
+        max-width: 100%;
+    }
+}
+
+.page-comments {
+    padding: $page-padding;
+    padding-bottom: 0;
+}
