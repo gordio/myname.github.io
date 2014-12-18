@@ -154,6 +154,14 @@ header {
         // text-indent: 1.5em;
     }
 
+    code {
+        padding: 0.1em 0.2em;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        border-radius: 3px;
+    }
+
     pre {
         margin: 0.75em $page-padding * -1;
         padding: 0 $page-padding;
@@ -164,6 +172,9 @@ header {
         code {
             margin: 0;
             padding: 0;
+            background-color: transparent;
+            border: none;
+            border-radius: none;
         }
     }
 
