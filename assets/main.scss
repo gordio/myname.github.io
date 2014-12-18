@@ -151,8 +151,10 @@ header {
 
     p {
         margin: 0.75em 0;
-        // text-indent: 1.5em;
+        text-indent: 1.5em;
     }
+
+    .page-title + p {text-indent: 0}
 
     code {
         padding: 0.1em 0.2em;
@@ -182,6 +184,8 @@ header {
         margin: 0.75em 0;
         padding: 0 0.75em;
         border-left: 0.25em solid $brown;
+
+        p {text-indent: 0}
     }
 
     img {
