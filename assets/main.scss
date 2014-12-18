@@ -198,3 +198,39 @@ header {
     padding: $page-padding;
     padding-bottom: 0;
 }
+
+
+// For mobile devices
+@media only screen and (max-width: 40em) {
+    body {font-size: 1em;}
+
+    header {
+        hgroup {
+            margin: 0.125em $page-padding/2;
+        }
+    }
+
+    .head-nav {
+        padding: 2em $page-padding/2;
+    }
+
+
+    .page {
+        padding: 0 $page-padding/2;
+        &:after {
+            margin-top: $page-padding/2;
+        }
+        &:before {
+            margin-bottom: $page-padding/2;
+        }
+
+        pre {
+            margin: 0.75em $page-padding/2 * -1;
+            padding: 0 $page-padding/2;
+        }
+    }
+
+    .page-comments {
+        padding: $page-padding/2;
+    }
+}
